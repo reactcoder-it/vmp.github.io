@@ -1,0 +1,182 @@
+:root {
+    --background-color:#fff;
+    --link-color: rgb(0, 96, 160);
+    --link-underline-color:rgba(0,100,168,0.2);
+    --link-color-selected:#ff5020;
+    --link-color-hover:#a03000;
+    --link-underline-color-hover:rgba(160,48,0,0.2);
+    --photo: url('../img/y6nL4uV3eB0.png');
+}
+@font-face {
+    font-family: museo100;
+    src: url(../fonts/MuseoSansCyrl100.otf) format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: museo300;
+    src: url(../fonts/MuseoSansCyrl300.otf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: museo500;
+    src: url(../fonts/MuseoSansCyrl500.otf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: museo900;
+    src: url(../fonts/MuseoSansCyrl900.otf) format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+    font-display: optional;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+body {
+    background-color: var(--background-color);
+    background: url('../img/workspace-2.svg') right no-repeat;
+    background-size: 60%;
+    color: var(--foreground-color);
+    padding: 0;
+    margin: 0;
+    font-family: museo300, "Helvetica Neue", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+}
+a, a:visited {
+    text-decoration: none;
+    /* border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--link-underline-color); */
+    border-bottom: 1px solid rgba(0, 100, 168, .2);
+    color: var(--link-color);
+    transition-property: border-bottom, border-color, background, color, fill;
+    transition-duration: .33s;
+    transition-timing-function: ease-out;
+}
+a:hover {
+    color: var(--link-color-hover);
+    border-color: var(--link-underline-color-hover);
+    transition: none;
+}
+.wrapper {
+    width: 96%;
+    margin: auto;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    background: var(--photo);
+}
+
+/* .menu-line */
+.menu-line {
+    display: flex;
+    flex-direction: column;   
+}
+.menu-line__top {
+    display: inline-block;
+}
+.menu-line__title {
+    font-size: 15px;
+    color: var(--link-color);
+    margin: 0 0 7px 10px;
+    display: inline-block;
+}
+.menu-line__subtitle {
+    margin: 0 0 0 10px;
+    color: #A0A0A0;
+}
+
+/* Блок .menu-block */
+.menu-block {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    text-decoration: none;
+    color: var(--linkColor);
+    cursor: pointer;
+}
+.menu-block__item:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+/* Блок .menu */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.menu__left {
+    display: flex;
+}
+
+/* Блок .menu-container */
+.menu-container {
+    padding: 20px 0 10px;
+}
+
+/* Блок .hero */
+.hero {
+    min-height: 70vh;
+    max-width: 60%;
+}
+.hero__header {
+    color: var(--link-color);
+    font-family: museo900, "Helvetica Neue", "Arial", sans-serif;
+    font-size: 48px;
+    border-bottom: 1px solid rgba(0,100,168,0.2);
+    line-height: 58px;
+    
+}
+.hero__content {
+    font-display: museo500, "Helvetica Neue", "Arial", sans-serif;
+    font-size: 24px;
+    line-height: 40px;
+}
+.hero__img {
+    width: 40%;
+    float: right;
+}
+
+/* Блок .footer */
+.footer {
+    bottom: 5%;
+}
+.footer__copyrights {
+    font-size: 12px;
+    color: #000;
+}
+
+.language-button {
+    border: 1px solid rgba(0,100,168,0.2);
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    body {
+        background-size: 50%;
+        background-position: right bottom;
+    }
+    .hero {
+        max-width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .menu {
+        flex-direction: column;
+    }
+    .menu__right {
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+    body {
+        background: none;
+    }
+}
