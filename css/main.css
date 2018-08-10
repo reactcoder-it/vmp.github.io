@@ -179,4 +179,8 @@ a:hover {
     body {
         background: none;
     }
+    .hero {
+        max-height: auto;
+        margin-bottom: 50px;
+    }
 }
