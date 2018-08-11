@@ -182,8 +182,8 @@ a.menu-block__item_active {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-    body {
+@media screen and (max-width: 992px) {
+    .index {
         background-size: 50%;
         background-position: right bottom;
     }
@@ -191,7 +191,7 @@ a.menu-block__item_active {
         max-width: 100%;
     }
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
     .menu {
         flex-direction: column;
     }
@@ -199,11 +199,12 @@ a.menu-block__item_active {
         margin-top: 20px;
         margin-left: 50px;
     }
-    body {
+    .index {
         background: none;
     }
     .hero {
         max-height: auto;
         margin-bottom: 50px;
+        max-width: 100%;
     }
 }
