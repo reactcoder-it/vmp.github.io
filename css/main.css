@@ -207,4 +207,13 @@ a.menu-block__item_active {
         margin-bottom: 50px;
         max-width: 100%;
     }
+    .article h1 {
+        margin-top: 40px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .article p, .article ol {
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
