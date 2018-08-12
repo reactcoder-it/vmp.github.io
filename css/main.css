@@ -167,14 +167,14 @@ a.menu-block__item_active {
 .article {
     width: 100%;
 }
-.article__title {
+.article h1 {
     color: var(--link-color);
     font-family: museo900, "Helvetica Neue", "Arial", sans-serif;
     font-size: 48px;
     border-bottom: 1px solid rgba(0,100,168,0.2);
     line-height: 58px;
 }
-.article__p, .article__ol {
+.article p, .article ol {
     color: #000;
     font-family: museo500, "Helvetica Neue", "Arial", sans-serif;
     font-size: 24px;
