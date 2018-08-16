@@ -16,6 +16,7 @@ app.get('/', function (req, res) {
 });
 
 var texts_path = __dirname + '/texts';
+var jokes_path = __dirname + '/jokes';
 
 app.get('/blog', function (req, res) {
     fs.readdir(texts_path, function(err, files) {
@@ -32,6 +33,23 @@ app.get('/blog/:file', function (req, res) {
             data
         });
     });
+});
+
+app.get('/jokes', function(req, res) {
+    fs.readdir(jokes_path, function(err, files) {
+        res.render('jokes', {
+            files: files
+        });
+    });
+});
+
+app.get('/jokes/:file', function(req, res) {
+    fs.readFile(jokes_path + '/' + req.params.file, function(err, data) {
+        if (err) res.send('Произошла ошибка!');
+        res.render('joke', {
+            data
+        });
+    })
 });
 
 app.listen(8080);
