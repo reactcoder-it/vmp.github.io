@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Вадим Пашаев | Фуллстек веб-девелопер. Проектирование сайтов и веб-приложений. Обучение программированию на JavaScript. Заметки Фуллстек Девелопера.">
     <title>Вадим Пашаев</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function (d, w, c) {
@@ -48,7 +48,7 @@
         gtag('config', 'UA-104524877-2');
     </script>
 </head>
-<body class="index">
+<body {{#if index}}class="index"{{/if}}>
     <div class="wrapper">
         <div class="menu-container">
             <div class="menu">
@@ -69,22 +69,17 @@
                     <div class="menu-block">
                         <!-- <a href="#" class="menu-block__item">Проекты</a>
                         <a href="#" class="menu-block__item">Мир</a> -->
-                        <a href="/blog.html" class="menu-block__item">Блог</a>
+                        <a href="/blog" class="menu-block__item">Блог</a>
                     </div>
                     <a href="#" class="language-button" style="text-transform: uppercase">ru</a>
                 </div>
             </div>
         </div>
-        <div class="hero">
-            <h1 class="hero__header">Обо мне</h1>
-            <p class="hero__content">
-                Проектирую сайты, приложения. Руковожу работой дизайнеров и разработчиков. Работаю над собственными проектами.
-                Пишу, обучаю программированию на JavaScript, слушаю музыку, путешествую и фотографирую.
-            </p>
-            <a href="https://www.fl.ru/users/vadja-booom/" class="button">Заказать разработку</a>
-        </div>
+
+        {{{body}}}
+
         <div class="footer">
-            <a href="https://www.fl.ru/users/vadja-booom/">ФЛ</a>
+            <a href="https://www.fl.ru/users/vadja-booom">ФЛ</a>
             <a href="https://www.instagram.com/code.overload/">Инстаграм</a>
             <a href="https://vk.com/vadja.booom/">Вконтакте</a>
             <a href="mailto:vmp@live.ru">Емэйл</a>
