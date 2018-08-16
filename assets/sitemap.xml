@@ -9,22 +9,47 @@
 
 <url>
   <loc>http://pxstudio.pw/</loc>
-  <lastmod>2018-08-16T12:55:28+00:00</lastmod>
+  <lastmod>2018-08-16T15:03:04+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://pxstudio.pw/blog</loc>
-  <lastmod>2018-08-16T12:55:28+00:00</lastmod>
+  <loc>http://pxstudio.pw/jokes</loc>
+  <lastmod>2018-08-16T15:03:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://pxstudio.pw/blog/ob-html-css.html</loc>
-  <lastmod>2018-08-16T12:55:28+00:00</lastmod>
+  <loc>http://pxstudio.pw/blog</loc>
+  <lastmod>2018-08-16T15:03:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pxstudio.pw/jokes/dva-programmista.html</loc>
+  <lastmod>2018-08-16T15:03:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://pxstudio.pw/jokes/kak-zamanit-programmista.html</loc>
+  <lastmod>2018-08-16T15:03:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://pxstudio.pw/jokes/koshka-i-myshka.html</loc>
+  <lastmod>2018-08-16T15:03:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://pxstudio.pw/jokes/vovocka-programmist.html</loc>
+  <lastmod>2018-08-16T15:03:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://pxstudio.pw/blog/ob-html-css-i-js.html</loc>
+  <lastmod>2018-08-16T15:03:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://pxstudio.pw/blog/samodisciplina-dlya-frilansera.html</loc>
-  <lastmod>2018-08-16T12:55:28+00:00</lastmod>
+  <lastmod>2018-08-16T15:03:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
