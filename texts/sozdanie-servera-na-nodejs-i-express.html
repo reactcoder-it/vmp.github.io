@@ -1,0 +1,33 @@
+<div class="article">
+    <h1>Создание простейшего сервера на Node.js и Express</h1>
+    <p><time datetime="2018-08-17 21:51">17 августа 2018 г.</time></p>
+
+    <p>Express - это быстрый, гибкий, минималистичный веб-фреймворк для приложений Node.js. Посмотреть можно
+        <cite><a href="http://expressjs.com/ru/">здесь</a></cite>.
+    </p>
+    <p>Создание простейшего HTTP-сервера на базе Express начинается с установки самого Express
+        с помощью следующей команды.</p>
+<pre class="article__cmd">
+$ npm init
+$ npm install --save express
+</pre>
+
+    <p>Далее создаем главный файл с именем, например index.js и в нем пишем следующий код:</p>
+
+<pre class="article__sourcecode"><code class="language-js"><span class="keywords">var</span> express <span class="symbol">=</span> <span class="keywords">require</span>('express');
+<span class="keywords">var</span> app <span class="symbol">=</span> express();
+
+app.get('/', <span class="keywords">function</span>(req, res) {
+    res.send('Hello, world!');
+});
+
+app.listen(8080);
+</code></pre>
+
+    <p>На этом все! Для запуска приложения в командной строке необходимо набрать следующую команду:</p>
+<pre class="article__cmd">
+$ node index
+</pre>
+
+    <p>Далее в браузере набираем путь 127.0.0.1:8080 и любуемся нашим приложением. Все достаточно просто!</p>
+</div>

@@ -189,6 +189,25 @@ a.menu-block__item_active {
     font-size: 24px;
     line-height: 40px;
 }
+.article__sourcecode {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+    background: #ccc;
+    padding: 10px;
+}
+.article__cmd {
+    background: #ccc;
+    padding: 10px;
+}
+
+.language-js .keywords {
+    color: #333388;
+}
+.language-js .symbol {
+    color: #333;
+}
 
 .button {
     background: rgba(79, 183, 111);
