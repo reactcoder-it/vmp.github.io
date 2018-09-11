@@ -3,5 +3,5 @@
     "append": true,
     "watch": true,
     "script": "index.js",
-    "sourceDir": "/home/jelastic/ROOT"
+    "sourceDir": "/root/vmp.github.io"
 }
