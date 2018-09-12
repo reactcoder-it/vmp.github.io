@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <% include partials/head %>
+  <% include partials/counters %>
+</head>
+
+<body class="index">
+
+  <div class="wrapper">
+
+    <% include partials/menu %>
+
+    <div class="hero">
+      <h1 class="hero__header">404 - Страница не найдена!</h1>
+      <p class="hero__content">
+        Кажется, у нас нет такой страницы.
+      </p>
+    </div>
+
+    <% include partials/footer %>
+
+  </div>
+
+  <script>
+    var hero = document.querySelector('.hero');
+    setTimeout(function() {
+      hero.classList.add('hero_transition');
+    }, 500);
+  </script>
+
+</body>
+</html>
