@@ -5,29 +5,29 @@
     --link-color-selected:#ff5020;
     --link-color-hover:#a03000;
     --link-underline-color-hover:rgba(160,48,0,0.2);
-    --photo: url('../img/y6nL4uV3eB0.png');
+    --photo: url('/img/y6nL4uV3eB0.png');
 }
 @font-face {
     font-family: museo100;
-    src: url(/assets/fonts/MuseoSansCyrl100.otf) format("truetype");
+    src: url(/fonts/MuseoSansCyrl100.otf) format("truetype");
     font-weight: 100;
     font-style: normal;
 }
 @font-face {
     font-family: museo300;
-    src: url(/assets/fonts/MuseoSansCyrl300.otf) format("truetype");
+    src: url(/fonts/MuseoSansCyrl300.otf) format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: museo500;
-    src: url(/assets/fonts/MuseoSansCyrl500.otf) format("truetype");
+    src: url(/fonts/MuseoSansCyrl500.otf) format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
     font-family: museo900;
-    src: url(/assets/fonts/MuseoSansCyrl900.otf) format("truetype");
+    src: url(/fonts/MuseoSansCyrl900.otf) format("truetype");
     font-weight: 900;
     font-style: normal;
 }
@@ -46,7 +46,7 @@ body {
 }
 .index {
     background-color: var(--background-color);
-    background: url('../img/workspace-2.svg') right no-repeat;
+    background: url('/img/workspace-2.svg') right no-repeat;
     background-size: 60%;
 }
 a, a:visited {

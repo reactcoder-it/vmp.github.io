@@ -1,55 +1,44 @@
-var express = require('express');
-var exphbs = require('express-handlebars');
-var fs = require('fs');
+// Подключаем внешние библы
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
 
-var app = express();
+// Подключаем роуты
+const index = require('./routes/index');
+const jokes = require('./routes/jokes');
+const blog = require('./routes/blog');
 
-app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }));
-app.set('view engine', 'hbs');
+// Создаем экземпляр express
+const app = express();
 
-app.use('/assets', express.static('assets'));
+// Отключаем в ответе информацию об express
+app.disable('x-powered-by');
 
-app.get('/', function (req, res) {
-    res.render('home', {
-        index: true
-    });
+// Устанавливаем в качестве шаблонизатора ejs
+app.set('view engine', 'ejs');
+
+// Устанавливаем директорию со статическими файлами
+app.use(express.static(path.join(__dirname, 'assets')));
+
+app.use('/', index);
+app.use('/jokes', jokes);
+app.use('/blog', blog);
+
+// Отслеживаем 404 ошибку и перенаправляем в обработчик ошибок
+app.use(function(req, res, next) {
+  res.status(404);
+  res.render('404');
 });
 
-var texts_path = __dirname + '/texts';
-var jokes_path = __dirname + '/jokes';
-
-app.get('/blog', function (req, res) {
-    fs.readdir(texts_path, function(err, files) {
-        res.render('blog', {
-            files: files
-        });
-    });
+// Обработчик ошибок
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error');
+  console.log(err);
 });
 
-app.get('/blog/:file', function (req, res) {
-    fs.readFile(texts_path + '/' + req.params.file, function (err, data) {
-        if (err) res.send('Произошла ошибка!');
-        res.render('blog-page', {
-            data
-        });
-    });
+// Запускаем сервер
+const port = process.env.PORT || 8080;
+app.listen(port, function () {
+  console.log(`Сервер запущен! Порт ${port}`);
 });
-
-app.get('/jokes', function(req, res) {
-    fs.readdir(jokes_path, function(err, files) {
-        res.render('jokes', {
-            files: files
-        });
-    });
-});
-
-app.get('/jokes/:file', function(req, res) {
-    fs.readFile(jokes_path + '/' + req.params.file, function(err, data) {
-        if (err) res.send('Произошла ошибка!');
-        res.render('joke', {
-            data
-        });
-    })
-});
-
-app.listen(8080);

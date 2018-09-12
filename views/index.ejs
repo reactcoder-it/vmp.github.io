@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <% include partials/head %>
+  <% include partials/counters %>
+</head>
+
+<body class="index">
+    
+  <div class="wrapper">
+
+    <% include partials/menu %>
+
+    <div class="hero">
+      <h1 class="hero__header">Обо мне</h1>
+      <p class="hero__content">
+        Проектирую сайты, приложения. Руковожу работой дизайнеров и разработчиков. Работаю над собственными проектами.
+        Пишу, обучаю программированию на JavaScript, слушаю музыку, путешествую и фотографирую.
+      </p>
+      <a href="https://www.fl.ru/users/vadja-booom/" class="button">Заказать разработку</a>
+    </div>
+
+    <% include partials/footer %>
+
+  </div>
+
+  <script>
+    var hero = document.querySelector('.hero');
+    setTimeout(function() {
+      hero.classList.add('hero_transition');
+    }, 500);
+  </script>
+
+</body>
+</html>
