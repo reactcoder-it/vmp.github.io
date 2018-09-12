@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <% include partials/head %>
+  <% include partials/counters %>
+</head>
+
+<body class="index">
+
+  <div class="wrapper">
+
+    <% include partials/menu %>
+
+    <div class="hero">
+      <h1 class="hero__header">500 - Внутренняя ошибка сервера!</h1>
+      <p class="hero__content">
+        Упс, произошла внутренняя ошибка!
+      </p>
+    </div>
+
+    <% include partials/footer %>
+
+  </div>
+
+  <script>
+    var hero = document.querySelector('.hero');
+    setTimeout(function() {
+      hero.classList.add('hero_transition');
+    }, 500);
+  </script>
+
+</body>
+</html>
