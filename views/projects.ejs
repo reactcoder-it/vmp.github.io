@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <% include partials/head %>
+  <% include partials/counters %>
+</head>
+
+<body>
+    
+  <div class="wrapper">
+
+    <% include partials/menu %>
+
+      <h1 class="hero__header">Мои проекты</h1>
+
+      <p data-height="465" data-theme-id="dark" data-slug-hash="rZqwVW" data-default-tab="css,result" data-user="booom" data-pen-title="HTML/CSS Plastic Card (BEM)" class="codepen">See the Pen <a href="https://codepen.io/booom/pen/rZqwVW/">HTML/CSS Plastic Card (BEM)</a> by Vadim Pashaev (<a href="https://codepen.io/booom">@booom</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>    
+
+    <% include partials/footer %>
+
+  </div>
+
+  <script>
+    var hero = document.querySelector('.hero');
+    setTimeout(function() {
+      hero.classList.add('hero_transition');
+    }, 500);
+  </script>
+
+</body>
+</html>

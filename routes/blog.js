@@ -7,7 +7,7 @@ const texts_path = './texts';
 
 router.get('/', function (req, res) {
   fs.readdir(texts_path, function(err, files) {
-    res.render('jokes', {
+    res.render('blog', {
       files: files,
       title: "Блог",
       jokes: false
