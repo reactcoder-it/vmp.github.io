@@ -15,10 +15,11 @@ const app = express();
 app.disable('x-powered-by');
 
 // Устанавливаем в качестве шаблонизатора ejs
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 // Устанавливаем директорию со статическими файлами
-app.use(express.static(path.join(__dirname, 'assets')));
+app.use(express.static(path.join(__dirname, '/assets')));
 
 app.use('/', index);
 app.use('/jokes', jokes);
